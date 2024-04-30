@@ -1,0 +1,98 @@
+/* You can do it this way without using bootstrap
+.navbar-nav{
+  margin-left: auto;
+}
+
+ScrollSpy requires position relative on the element youre spying on, usually the body*/ 
+
+body{
+  position: relative;
+}
+
+header#home{
+  background-image: 
+    linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.7)), 
+    url("img/hero.jpeg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  padding: 20%;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgb(80,0,0);
+
+}
+
+.card{
+  width: 300px;
+  display: inline-block;
+  margin: 10px;
+}
+
+.card-img-top{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-footer.price{
+  position: absolute;
+  right: 20px;
+}
+
+/* if its too crowed add padding to the card */
+section{
+  padding:40px 0;
+}
+
+/* To help tell the different between the sections add background color */ 
+
+section#properties {
+  background-color: #fafafa;
+}
+
+section#testimonials {
+  background-color: #d4d4d4;
+}
+
+section#about-us{
+  background-color: #fafafa;
+}
+
+#properties-target, 
+#testimonials-target, 
+#about-us-target{
+  position: relative;
+  top: -100px;
+}
+
+/* Transparent look when scrolling down it turns black after you hit 50px down the page. And that is because that scroll top class is being added and remove from the body using our custom JavaScript
+Also adding Ladder= !important This tells the browser to prioritize the background-color other properties that may be even higher specificity in their selector rules */
+.scroll-top .navbar{
+background-color: transparent !important;
+}
+
+
+/* object dash fit property is used to make the image fill the container and not stretch it and the object dash position property to treat an image more like a background image */
+.carousel-item img{
+  object-fit: cover;
+  object-position: center;
+  height:60vh;
+  overflow: hidden;
+}
+
+/* .carousel-item:after make the images little darker transparent */
+.carousel-item:after {
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background:rgba(0,0,0,.3);
+}
+
+/* .carousel-caption is used to add text to the image. Z-index is used to make sure the text is on top of the image */
+.carousel-caption{
+  z-index: 1;
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Vacation Rentals</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+<!--Use ScrollSpy Bootstrap component that helps monitor the scroll position of the page and updates navbar to highlight the current section.
+  Telling Bootstrap to set highlight about 100px higher on the page than it thinks it needs to be at the proper scroll position-->
+  
+  <body class="scroll-top"
+    data-bs-spy="scroll"
+    data-bs-target=".navbar"
+    data-bs-offset="100">
+
+<!--Set a breakpoint to where the expand will take effect to certain screen sizes. Screen size can rang from xs,sm,md,lg,xl,xxl-->
+    
+    <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+      <div class="container">
+        <a href="#home" class="navbar-brand">
+          <i class="bi bi-house-door"></i>
+        </a>
+       
+        <!-- We make a button that will be hidden when the content's not collapsed but then appear when the content is collapsed by creating a button with nav bar, dash toggler. Then we get a special icon call hamburger menu which indicates to the user there's more content to be expanded. Bootstrap has special class for this write span class,navbar dash toggler dashicon. Now have to set attributes on this button so bootstrap knows what to do when click-->
+        
+         <button class="navbar-toggler"
+           data-bs-toggle="collapse"
+             data-bs-target="#nav-collapse">
+           <span class="navbar-toggler-icon"></span>
+        </button>
+
+       <!-- Expand and collapse will change the behavior on this navbar when viewed on a small screen.
+        We can add Bootstrap auto margin on the left-hand side of our element we can add it to that class navbar narrative ms-auto-->
+        <div id="nav-collapse" class="collapse navbar-collapse">
+        <div class="navbar-nav ms-auto">
+          <a href="#properties-target" class="nav-link">Properties</a>
+          <a href="#testimonials-target" class="nav-link">Testimonials</a>
+          <a href="#about-us-target" class="nav-link">About Us</a>
+         </div>
+         </div>
+      </div>
+     </nav> 
+       
+      <header id="home">
+          <h2 class="display-2">Your dream home <span class="text-muted"> is a just click 
+          away</span>.</h2>
+      
+          <button class="btn btn-outline-light">Learn More</button>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <button class="btn btn-outline-info">Book Now</button>
+      </header>
+<!--to make it more like a section add bootstrap class container also add header-->
+      <section id="properties">
+        <div id="properties-target"></div>
+          <div class="container">
+            <h2>Properties</h2>
+          <div class="card">
+            <img src="img/home-1.jpeg"alt="image of a home." 
+             class="card-img-top">  
+            <div class="card-body">
+              <h5 class="card-title">A beautiful home.</h5>
+            <p class="card-text">A description of a neautiful home. 
+           </p>
+          </div>
+            <div class="class-footer">
+              Entire Plass <span class="price">$99</span>
+              </div>
+            </div>
+  
+        <div class="card">
+            <img src="img/home-2.jpeg"alt="image of a home" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title">A beautiful home.</h5>
+            <p class="card-text">A description of a beautiful home.</p>
+          </div>
+              <div class="class-footer">
+             Entire Plass <span class="price">$99</span>
+           </div>
+          </div>
+  
+            <div class="card">
+              <img src="img/home-3.jpeg"alt="image of a home" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">A beautiful home.</h5>
+              <p class="card-text">A description of a neautiful home.</p>
+            </div>
+  
+              <div class="class-footer">
+              Entire Plass <span class="price">$99</span>
+              </div>
+            </div>
+  
+              <div class="card">
+                <img src="img/home-4.jpeg"alt="image of a home" class="card-img">
+                <div class="card-body">
+                  <h5 class="card-title">A beautiful home.</h5>
+                <p class="card-text">A description a beautiful home.</p>
+              </div>
+              <div class="class-footer">
+              Entire Plass <span class="price">$99</span>
+              </div>
+            </div> 
+        </div>  
+      </section>
+
+      <section id="testimonials">
+        <div id="testimonials-target"></div>
+        <div class="container">
+  <h2>Tesmonials</h2>
+<!--You can add auto-scroll to the carousel by adding data-bs-ride="carousel"> to the div class container to turn off add data-bs-interval="false">
+        <div class="carousel-caption d-none d-md-block"> This class causes caption to be hidden on mobile sizes  -->
+              <div id="carouselExampleCaptions" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="img/testimonial-1.jpeg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-md-block">
+                      <h5>First slide label</h5>
+                      <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/testimonial-2.jpeg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-md-block">
+                      <h5>Second slide label</h5>
+                      <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/testimonial-3.jpeg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-md-block">
+                      <h5>Third slide label</h5>
+                      <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+                
+      </section>
+   
+    <section id="about-us">
+      <div id="about-us-target"></div>  
+      <div class="container">
+    <h2>About Us</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem maxime voluptatum repudiandae temporibus neque totam architecto necessitatibus nesciunt soluta veritatis eos exercitationem deserunt iste, impedit perferendis doloribus, voluptates dolores tempora?</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem maxime voluptatum repudiandae temporibus neque totam architecto necessitatibus nesciunt soluta veritatis eos exercitationem deserunt iste, impedit perferendis doloribus, voluptates dolores tempora?</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem maxime voluptatum repudiandae temporibus neque totam architecto necessitatibus nesciunt soluta veritatis eos exercitationem deserunt iste, impedit perferendis doloribus, voluptates dolores tempora?</p>
+      </div>  
+    </div>
+    </section>
+
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
